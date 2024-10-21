@@ -23,6 +23,14 @@ img{
   
 }
 
+h2, h3{
+    color: var(--clr-VeryDarkGrayishBlue);
+}
+
+p{
+    color: var(--DesaturatedDarkBlue);
+}
+
 html, body{
     min-height: 100%;
 }
@@ -69,22 +77,47 @@ body {
     padding-bottom: 24px;
 }
 
-.card-info p{
+.card-info .main-text{
     padding-top: 24px;
     padding-bottom: 36px;
-}
-
-.image-wrapper img{
+    line-height: 1.6;
 }
 
 
 .avatar-wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.avatar-wrapper img{
+.avatar-img-text img{
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+.avatar-icon{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--LightGrayishBlue);
+}
+
+.avatar-icon img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.avatar-img-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-info{
+    margin-left: 20px;
 }
