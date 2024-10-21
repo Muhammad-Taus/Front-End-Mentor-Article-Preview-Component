@@ -42,7 +42,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 200vh;
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -56,7 +56,7 @@ body {
 }
 
 .container{
-    width: 90%;
+    /* width: 90%; */
     max-width: 350px;
     
 }
@@ -64,6 +64,7 @@ body {
 .main-card{
     border-radius: 10px;
     background-color: white;
+    position: relative;
 }
 
 .image-wrapper img{
@@ -90,10 +91,20 @@ body {
     align-items: center;
 }
 
+.avatar-img-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .avatar-img-text img{
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+.avatar-info{
+    margin-left: 20px;
 }
 
 .avatar-icon{
@@ -104,6 +115,12 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--LightGrayishBlue);
+    cursor: pointer;
+    transition: .05s ease;
+}
+
+.avatar-icon:hover{
+    opacity: 0.75;
 }
 
 .avatar-icon img{
@@ -112,12 +129,55 @@ body {
     object-fit: contain;
 }
 
-.avatar-img-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.avatar-share-icons{
+    background-color: var(--clr-VeryDarkGrayishBlue);
+    color: white;
+    /* border: 2px solid red; */
+    border-radius:  0 0 10px 10px;
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+    
+    
 }
 
-.avatar-info{
-    margin-left: 20px;
+.display-share{
+    display: none;
 }
+
+.avatar-wrapper-share{
+    /* width: 90%; */
+    max-width: 350px;
+    margin: auto;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 24px;
+    padding-inline: 32px;
+}
+
+.share-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: lime; */
+    width: 70%;
+}
+
+.share-icons p{
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+    letter-spacing: 2px;
+}
+
+.share-icons img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
