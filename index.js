@@ -1,9 +1,15 @@
-const shareBtn = document.getElementById("icon");
-const displayShare =  document.getElementById("display-share");
+const shareBtn = document.querySelector("#icon-btn");
+// const displayShare =  document.getElementById("display-share");
 
-shareBtn.addEventListener("click", () => {
-    console.log(shareBtn);
-    console.log(displayShare);
+console.log(shareBtn);
+
+
+
+shareBtn.addEventListener("click", (e) => {
+    
+    console.log(e);
 }); 
 
-alert('Worked!');
+// alert('Worked!');
+
+
