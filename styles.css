@@ -3,6 +3,8 @@
     --DesaturatedDarkBlue: hsl(214, 17%, 51%);
     --GrayishBlue: hsl(212, 23%, 69%);
     --LightGrayishBlue: hsl(210, 46%, 95%);
+
+    --clr-TextSelection: hsl(40, 100%, 69%);
 }
 
 *,
@@ -103,6 +105,11 @@ body {
     line-height: 1.6;
 }
 
+.main-text::selection, .share-icons p::selection{
+    background: var(--clr-TextSelection);
+    color: black;
+  }
+
 
 .avatar-wrapper{
     display: flex;
@@ -128,7 +135,7 @@ body {
     margin-left: 20px;
 }
 
-.avatar-icon{
+.avatar-icon, .avatar-icon-active{
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -138,7 +145,10 @@ body {
     background-color: var(--LightGrayishBlue);
     cursor: pointer;
     transition: .05s ease;
-    position: relative;
+}
+
+.avatar-icon-active img{
+    color: white;
 }
 
 
@@ -146,50 +156,44 @@ body {
     filter: invert(1);
 }
 
-.avatar-icon img{
+.avatar-icon img, .avatar-icon-active img{
     width: 50%;
     height: 50%;
     object-fit: contain;
 }
 
-.avatar-icon img:hover{
+/* .avatar-icon img:hover, .avatar-icon-active img:hover{
+    opacity: 0.75;
+} */
+
+.avatar-icon:hover, .avatar-icon-active:hover{
     opacity: 0.75;
 }
 
-.avatar-wrapper-share{
+.avatar-share{
     background-color: var(--clr-VeryDarkGrayishBlue);
     position: absolute;
-    top: -200%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-
-/* .avatar-share-icons{
-    background-color: var(--clr-VeryDarkGrayishBlue);
-    color: white;
-    border-radius:  0 0 10px 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 5;
     
-} */
-
-
-
-.avatar-wrapper-share{
-    /* width: 90%; */
-    max-width: 350px;
-    margin: auto;
-    /* border: 2px solid red; */
+    transition: .3s ease;
+    transform: scale(0);
+    
+    bottom: 0;
+    width: 100%;transform-origin: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: 24px;
     padding-inline: 32px;
+    border-radius: 0 0 10px 10px;
+    display: block;
 }
+
+
+.scale-1{
+    transform: scale(1);
+}
+
+
 
 .share-icons{
     display: flex;
@@ -208,7 +212,17 @@ body {
 .share-icons img{
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
+
+.share-icons img:hover{
+    opacity: 0.75;
+}
+
+/* 
+.display{
+    display: block;
+} */
 
 
 
