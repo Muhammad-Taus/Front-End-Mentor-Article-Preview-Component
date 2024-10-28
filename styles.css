@@ -44,7 +44,7 @@ html {
 }
 
 body {
-    height: 140vh;
+    height: 100vh;
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -198,7 +198,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: lime; */
     width: 70%;
 }
 
@@ -220,9 +219,6 @@ body {
 
 
 @media all and (min-width: 900px) {
-    /* body{
-        background-color: red;
-    } */
 
     .main-card{
         display: flex;
@@ -230,7 +226,6 @@ body {
     }
 
     .container{
-        /* width: 90%; */
         max-width: 800px;
         
     }
