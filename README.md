@@ -15,7 +15,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Screenshot
 
-![](./assets/images/social-links-completed.jpg)
+![](./images/completed/article-preview.jpg)
 
 
 ### Links
